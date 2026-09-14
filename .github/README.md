@@ -714,4 +714,4 @@ If this project is useful in academic work or you want to reference its cross-pl
 
 Released under the [MIT License](../LICENSE).
 
-Created and maintained by [Son Nguyen](https://github.com/hoangsonww). The original 2048 concept is by Gabriele Cirulli; this is an independent implementation and is not affiliated with or endorsed by the original author.
+Created and maintained by [Varshith](https://github.com/Varshith989). The original 2048 concept is by Gabriele Cirulli; this is an independent implementation and is not affiliated with or endorsed by the original author.

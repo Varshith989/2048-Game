@@ -11,7 +11,7 @@
   "orientation": "any",
   "background_color": "#f5f0e6",
   "theme_color": "#f5f0e6",
-  "author": "Son Nguyen Hoang",
+  "author": "Varshith",
   "description": "Slide, combine, and build your way to the 2048 tile.",
   "categories": ["games", "entertainment"],
   "prefer_related_applications": false,

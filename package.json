@@ -30,11 +30,11 @@
     "jetpack-compose",
     "progressive-web-app"
   ],
-  "author": "Son Nguyen",
+  "author": "Varshith",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hoangsonww/2048-Game.git"
+    "url": "git+https://github.com/Varshith989/2048-Game.git"
   },
   "bugs": {
     "url": "https://github.com/hoangsonww/2048-Game/issues"
