@@ -69,27 +69,33 @@ jobs:
 
   build-ios:
     name: 🍎 Build iOS Simulator App
-    runs-on: macos-latest
+    runs-on: macos-15
+    timeout-minutes: 45
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: List available schemes
-        run: xcodebuild -project "2048 Game.xcodeproj" -list
+      - name: Report Xcode version
+        run: xcodebuild -version
+
+      - name: Select and boot an iPhone simulator
+        run: |
+          DEVICE_ID=$(xcrun simctl list devices available -j | jq -r '[.devices[][] | select(.name | startswith("iPhone"))][0].udid')
+          if [ -z "$DEVICE_ID" ] || [ "$DEVICE_ID" = "null" ]; then
+            echo "No available iPhone simulator found" >&2
+            exit 1
+          fi
+          xcrun simctl boot "$DEVICE_ID" 2>/dev/null || true
+          xcrun simctl bootstatus "$DEVICE_ID" -b
+          echo "IOS_DESTINATION=platform=iOS Simulator,id=$DEVICE_ID" >> "$GITHUB_ENV"
 
       - name: Build for iOS Simulator
         run: |
-          xcodebuild \
-            -project "2048 Game.xcodeproj" \
-            -scheme "Game-2048" \
-            -sdk iphonesimulator \
-            -configuration Release \
+          xcodebuild -project "2048 Game.xcodeproj" -scheme "Game-2048" \
+            -destination "$IOS_DESTINATION" \
             -derivedDataPath build \
-            -destination "platform=iOS Simulator,name=iPhone 16,OS=latest" \
-            CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGNING_ALLOWED=NO \
-            ONLY_ACTIVE_ARCH=NO
+            -configuration Release \
+            CODE_SIGNING_ALLOWED=NO
 
       - name: Zip the .app bundle
         run: |
