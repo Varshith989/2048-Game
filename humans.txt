@@ -1,6 +1,6 @@
 /* TEAM */
-Creator and maintainer: Son Nguyen
-Repository: https://github.com/hoangsonww/2048-Game
+Creator and maintainer: Varshith
+Repository: https://github.com/Varshith989/2048-Game
 
 /* SITE */
 Language: English

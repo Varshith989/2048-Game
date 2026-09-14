@@ -20,15 +20,13 @@ type: software
 version: 1.2.0
 date-released: "2026-08-21"
 license: MIT
-repository-code: "https://github.com/hoangsonww/2048-Game"
-url: "https://hoangsonww.github.io/2048-Game/"
-repository-artifact: "https://github.com/hoangsonww/2048-Game/releases"
+repository-code: "https://github.com/Varshith989/2048-Game"
+url: "https://varshith989.github.io/2048-Game/"
+repository-artifact: "https://github.com/Varshith989/2048-Game/releases"
 authors:
-  - given-names: Son
-    family-names: Nguyen
-    alias: hoangsonww
-    orcid: "https://orcid.org/0009-0002-7806-068X"
-    website: "https://github.com/hoangsonww"
+  - given-names: Varshith
+    alias: Varshith989
+    website: "https://github.com/Varshith989"
 keywords:
   - "2048"
   - puzzle game
