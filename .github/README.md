@@ -48,7 +48,7 @@ A polished, accessible, offline-first 2048 puzzle shipped as **three independent
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
-**[▶ Play the web version](https://hoangsonww.github.io/2048-Game/)** · [Download the apps](https://github.com/hoangsonww/2048-Game/releases/latest) · [Rules and strategy](https://hoangsonww.github.io/2048-Game/Web-Version/about.html) · [Report an issue](https://github.com/hoangsonww/2048-Game/issues) · [Contributing](CONTRIBUTING.md) · [Security policy](SECURITY.md)
+**[▶ Play the web version](https://classy-youtiao-7a4efb.netlify.app/)** · [Download the apps (v2.0.1)](https://github.com/Varshith989/2048-Game/releases/tag/v2.0.1) · [Rules and strategy](Web-Version/about.html) · [Report an issue](https://github.com/Varshith989/2048-Game/issues) · [Contributing](CONTRIBUTING.md) · [Security policy](SECURITY.md)
 
 ---
 
@@ -315,7 +315,7 @@ Full detail in [`ARCHITECTURE.md`](../ARCHITECTURE.md#server-driven-surfaces).
 Clone and bootstrap:
 
 ```bash
-git clone https://github.com/hoangsonww/2048-Game.git
+git clone https://github.com/Varshith989/2048-Game.git
 cd 2048-Game
 make setup     # installs locked npm dependencies and activates Git hooks
 make doctor    # reports which platform toolchains this machine can build
@@ -447,7 +447,7 @@ The first run downloads a matching JDK 17 (roughly 180 MB, cached in `~/.gradle/
 
 To work in Android Studio instead, open `Android-Version/Game2048`, let the Gradle sync finish, then run the `app` configuration.
 
-The debug APK is written to `Android-Version/Game2048/app/build/outputs/apk/debug/app-debug.apk`. If you only want to *play* the Android app, download the prebuilt APK from the [latest release](https://github.com/hoangsonww/2048-Game/releases/latest) instead — no toolchain required.
+The debug APK is written to `Android-Version/Game2048/app/build/outputs/apk/debug/app-debug.apk`. If you only want to *play* the Android app, download the prebuilt APK [`2048-game-android.apk`](https://github.com/Varshith989/2048-Game/releases/download/v2.0.1/2048-game-android.apk) from the [v2.0.1 release](https://github.com/Varshith989/2048-Game/releases/tag/v2.0.1) instead — no toolchain required.
 
 ---
 
@@ -581,23 +581,22 @@ Supporting automation: **dependency review** blocks pull requests that introduce
 
 ## Releases and downloads
 
-Every tagged release carries a build of all three clients, so none of them
-requires a toolchain to try:
+Every tagged release carries a build of all three clients, so none of them requires a toolchain to try:
 
-| File | What it is |
-| --- | --- |
-| `2048-vX.Y.Z-debug.apk` | Android app — install directly on a device |
-| `2048-vX.Y.Z-ios-unsigned.zip` | Unsigned iOS `.app` for a simulator, or to sign yourself |
-| `2048-vX.Y.Z-web.zip` | The shipping web client — unzip and serve the folder |
-| `SHA256SUMS-ios.txt`, `SHA256SUMS-web.txt` | Checksums for the two zips |
+### Latest Release: [v2.0.1](https://github.com/Varshith989/2048-Game/releases/tag/v2.0.1)
 
-The latest is at [**Releases**](https://github.com/hoangsonww/2048-Game/releases/latest).
-The web client also runs at [hoangsonww.github.io/2048-Game](https://hoangsonww.github.io/2048-Game/)
+| Asset | Description | Direct Download |
+| --- | --- | --- |
+| `2048-game-android.apk` | Android APK — install directly on your phone or emulator | [Download](https://github.com/Varshith989/2048-Game/releases/download/v2.0.1/2048-game-android.apk) |
+| `2048-ios-simulator.zip` | iOS Simulator app bundle for macOS | [Download](https://github.com/Varshith989/2048-Game/releases/download/v2.0.1/2048-ios-simulator.zip) |
+| `2048-web-game.zip` | Web version — unzip and open `index.html` offline | [Download](https://github.com/Varshith989/2048-Game/releases/download/v2.0.1/2048-web-game.zip) |
+| `checksums.txt` | SHA-256 hashes for file integrity verification | [Download](https://github.com/Varshith989/2048-Game/releases/download/v2.0.1/checksums.txt) |
+
+All releases and changelogs are available at [**Releases**](https://github.com/Varshith989/2048-Game/releases).
+The web client also runs at [**Live Web App**](https://classy-youtiao-7a4efb.netlify.app/)
 with no download at all.
 
-The iOS artifact is unsigned on purpose. Signing needs a provisioning profile
-and a team identifier, neither of which belongs in a public repository, so App
-Store distribution stays outside this pipeline.
+The iOS simulator build runs on Mac Xcode simulators. App Store and on-device distribution requires an Apple Developer provisioning profile and team identifier.
 
 ### One version, three clients
 
@@ -694,7 +693,7 @@ Small, focused pull requests are very welcome. Before opening one:
 4. Add a test for behavior changes, or include a clear manual verification note describing exactly what you checked.
 5. Run `make check` plus the full suite for every platform you touched, and attach screenshots for UI changes.
 
-Issue forms for [bug reports](https://github.com/hoangsonww/2048-Game/issues/new?template=bug_report.yml) and [feature requests](https://github.com/hoangsonww/2048-Game/issues/new?template=feature_request.yml) are available. Participation is governed by the [Code of Conduct](CODE_OF_CONDUCT.md), and [`SUPPORT.md`](SUPPORT.md) explains where to ask questions.
+Issue forms for [bug reports](https://github.com/Varshith989/2048-Game/issues/new?template=bug_report.yml) and [feature requests](https://github.com/Varshith989/2048-Game/issues/new?template=feature_request.yml) are available. Participation is governed by the [Code of Conduct](CODE_OF_CONDUCT.md), and [`SUPPORT.md`](SUPPORT.md) explains where to ask questions.
 
 ---
 
