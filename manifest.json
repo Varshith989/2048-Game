@@ -1,0 +1,54 @@
+{
+  "name": "2048 — The Number Puzzle",
+  "short_name": "2048",
+  "lang": "en",
+  "dir": "ltr",
+  "id": "/2048-Game/",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#f5f0e6",
+  "theme_color": "#f5f0e6",
+  "author": "Son Nguyen Hoang",
+  "description": "Slide, combine, and build your way to the 2048 tile.",
+  "categories": ["games", "entertainment"],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Play a new round",
+      "short_name": "New round",
+      "description": "Open 2048 and start playing.",
+      "url": "./"
+    },
+    {
+      "name": "How to play",
+      "short_name": "Rules",
+      "description": "Read the rules and strategy guide.",
+      "url": "./Web-Version/about.html"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "images/web-version-UI.png",
+      "sizes": "1440x1566",
+      "type": "image/png",
+      "label": "2048 game board, scores, and controls"
+    }
+  ],
+  "icons": [
+    {
+      "src": "images/2048-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/2048-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
