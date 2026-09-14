@@ -152,6 +152,12 @@ jobs:
         id: tag
         run: echo "TAG=${GITHUB_REF_NAME}" >> $GITHUB_OUTPUT
 
+      - name: Delete existing release (if exists)
+        run: |
+          gh release delete "${{ steps.tag.outputs.TAG }}" --yes || true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Create GitHub Release with Assets
         uses: softprops/action-gh-release@v2
         with:
@@ -174,3 +180,4 @@ jobs:
             dist/checksums.txt
           draft: false
           prerelease: false
+          make_latest: true
